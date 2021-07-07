@@ -31,4 +31,6 @@ object UriUtils {
       .replaceAll("\\(", "%28")
       .replaceAll("\\)", "%29")
       .replaceAll("\\~", "%7E")
+      .replaceAll("\\/", "%2F")
+      .replaceAll("\\\\", "%5C")
 }
