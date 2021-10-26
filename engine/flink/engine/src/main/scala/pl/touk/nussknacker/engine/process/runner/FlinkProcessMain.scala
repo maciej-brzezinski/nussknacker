@@ -28,7 +28,7 @@ trait FlinkProcessMain[Env] extends FlinkRunner with LazyLogging {
       val env = getExecutionEnvironment
       runProcess(env, modelData, process, processVersion, deploymentData, ExecutionConfigPreparer.defaultChain(modelData))
     } catch {
-      // marker exception for graph optimalization
+      // marker exception for graph optimization
       // should be necessary only in Flink <=1.9
       case ex if ex.getClass.getSimpleName == "ProgramAbortException" =>
         throw ex
